@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Predict academic performance and get practical improvement guidance.">
+  <title>Student Performance Predictor</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="nav">
+      <div class="brand"><span class="brand-mark">SP</span><span>Student Performance</span></div>
+      <span class="status">ML-powered</span>
+    </header>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">ACADEMIC INSIGHT</p>
+        <h1>Know where you stand.<br><span>Know what to improve.</span></h1>
+        <p class="sub">Enter a few academic and lifestyle details to get an estimated performance score, risk level, and practical next steps.</p>
+      </div>
+      <div class="hero-card">
+        <div class="mini-label">PREDICTION</div>
+        <div class="hero-number">01</div>
+        <p>No installation. No Python. Just enter your details.</p>
+      </div>
+    </section>
+
+    <section class="grid">
+      <form id="prediction-form" class="panel form-panel">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">YOUR INPUTS</p>
+            <h2>Student profile</h2>
+          </div>
+          <span id="form-count">6 fields</span>
+        </div>
+
+        <label>Study hours per day <output id="study-output">4.0</output>
+          <input name="study_hours" type="range" min="0" max="12" step="0.5" value="4">
+        </label>
+        <label>Attendance <output id="attendance-output">75%</output>
+          <input name="attendance" type="range" min="0" max="100" step="1" value="75">
+        </label>
+        <label>Previous marks <output id="previous-output">65%</output>
+          <input name="previous_marks" type="range" min="0" max="100" step="1" value="65">
+        </label>
+        <label>Assignments completed <output id="assignments-output">7/10</output>
+          <input name="assignments_completed" type="range" min="0" max="10" step="1" value="7">
+        </label>
+        <label>Internal marks <output id="internal-output">65%</output>
+          <input name="internal_marks" type="range" min="0" max="100" step="1" value="65">
+        </label>
+        <label>Sleep hours per day <output id="sleep-output">7.0</output>
+          <input name="sleep_hours" type="range" min="0" max="12" step="0.5" value="7">
+        </label>
+
+        <button class="primary" type="submit">Predict my performance <span>→</span></button>
+        <p class="fine">This is an educational prediction based on the project's training data, not a formal academic assessment.</p>
+      </form>
+
+      <section id="result" class="panel result-panel empty">
+        <div class="result-placeholder">
+          <div class="circle">→</div>
+          <p class="eyebrow">YOUR RESULT</p>
+          <h2>Run a prediction</h2>
+          <p>Your estimated score and improvement guidance will appear here.</p>
+        </div>
+      </section>
+    </section>
+
+    <footer>
+      <span>Student Performance Predictor</span>
+      <span>Built with Python · FastAPI · Scikit-learn</span>
+    </footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
